@@ -1,0 +1,11 @@
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f8fafc;
+  margin: 0;
+  min-width: 220px;
+  min-height: 120px;
+}
+button {
+  font-size: 1em;
+  font-family: inherit;
+} 

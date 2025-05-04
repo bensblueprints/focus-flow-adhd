@@ -1,0 +1,7 @@
+#focusflow-overlay {
+  font-family: 'Inter', Arial, sans-serif;
+  box-sizing: border-box;
+}
+#focusflow-overlay * {
+  box-sizing: border-box;
+} 

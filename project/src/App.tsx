@@ -6,6 +6,7 @@ import TasksPage from './pages/TasksPage';
 import FocusTimer from './pages/FocusTimer';
 import HabitTracker from './pages/HabitTracker';
 import Settings from './pages/Settings';
+import Registration from './pages/Registration';
 import { ThemeProvider } from './context/ThemeContext';
 import { SettingsProvider } from './context/SettingsContext';
 
@@ -36,6 +37,7 @@ function App() {
     <ThemeProvider>
       <SettingsProvider>
         <Routes>
+          <Route path="/register" element={<Registration />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="tasks" element={<TasksPage />} />
