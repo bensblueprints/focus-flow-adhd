@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  --animation-speed: 1;
+}
+
+[data-reduced-motion="true"] {
+  --animation-speed: 0;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+.dark body {
+  @apply bg-gray-900 text-gray-50;
+}
+
+.focus-ring {
+  @apply ring-2 ring-primary-500 ring-offset-2 outline-none transition-all duration-150;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 disabled:opacity-50;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary-500 text-white hover:bg-secondary-600 active:bg-secondary-700;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent-500 text-white hover:bg-accent-600 active:bg-accent-700;
+  }
+  
+  .btn-success {
+    @apply btn bg-success-500 text-white hover:bg-success-600 active:bg-success-700;
+  }
+  
+  .btn-ghost {
+    @apply btn bg-transparent text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800;
+  }
+  
+  .card {
+    @apply rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg dark:bg-gray-800;
+  }
+  
+  .task-item {
+    @apply flex items-center gap-3 rounded-md p-3 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700;
+  }
+  
+  .input {
+    @apply rounded-md border border-gray-300 px-3 py-2 text-sm transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100;
+  }
+  
+  .checkbox {
+    @apply h-5 w-5 cursor-pointer rounded border border-gray-300 bg-white transition-colors checked:border-primary-500 checked:bg-primary-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:border-gray-600 dark:bg-gray-700;
+  }
+  
+  .form-group {
+    @apply flex flex-col gap-1.5;
+  }
+  
+  .label {
+    @apply text-sm font-medium text-gray-700 dark:text-gray-300;
+  }
+  
+  .timer-display {
+    @apply font-mono text-5xl font-bold tracking-tight;
+  }
+}
